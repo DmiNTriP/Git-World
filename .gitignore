@@ -41,3 +41,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/ContactsList/build/
+/ContactsList/nbproject/private/
+/HowOldISTheOldBitch/nbproject/private/
+/Invoice/nbproject/private/
