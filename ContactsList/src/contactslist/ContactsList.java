@@ -44,6 +44,7 @@ public class ContactsList {
             System.out.println("|     3. Display your Contacts                   |");
             System.out.println("| 4.Exit the program                         |");
             System.out.println("|================================================|");
+            System.out.println("Please input a corresponding numerical value from the above menu: ");
             digitValue = numIn.nextInt();
             /**
              * @param digitValue value user enters to get to proper interface
@@ -90,18 +91,9 @@ public class ContactsList {
      
         Scanner textIn = new Scanner(System.in);
         Scanner numIn = new Scanner(System.in);
-        System.out.println("Enter your First Name: ");
-        String fName = textIn.nextLine();
-        System.out.println("Enter your Last Name: ");
-        String lName = textIn.nextLine();
-        System.out.println("Enter your Address: ");
-        String address = textIn.nextLine();
-        System.out.println("Enter your Phone number in this format xxx-xxx-xxxx");
-        String phoneNum = textIn.nextLine();
-        System.out.println("Enter your e-mail address: ");
-        String eMail = textIn.nextLine();
-        System.out.println("Enter 1 for Business contact or 2 for Personal contact");
-        int choice = numIn.nextInt();
+       
+       // System.out.println("Enter 1 for Business contact or 2 for Personal contact");
+       int choice = numIn.nextInt();
         
             if (choice == 1) {
                   System.out.println("Enter your First Name: ");
