@@ -33,16 +33,7 @@ public class Personal extends Contacts {
     }
 
     public String birthDayFormat(String bDay) {
-        
-        String bDate= "";
-        //System.out.println("Please enter your birthdate in this format MM/DD/YYYY");
-        bDate = in.next();
-        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-        // DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        String birth = formatter.format(bDate);
-        birth = bDate;
-        bDate = bDay;
-        return bDate;
+       
     }
     public String newBirthDate(){
         String dob="";
