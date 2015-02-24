@@ -104,7 +104,16 @@ public class ContactsList {
         int choice = numIn.nextInt();
         
             if (choice == 1) {
-                
+                  System.out.println("Enter your First Name: ");
+        String fName = textIn.nextLine();
+        System.out.println("Enter your Last Name: ");
+        String lName = textIn.nextLine();
+        System.out.println("Enter your Address: ");
+        String address = textIn.nextLine();
+        System.out.println("Enter your Phone number in this format xxx-xxx-xxxx");
+        String phoneNum = textIn.nextLine();
+        System.out.println("Enter your e-mail address: ");
+        String eMail = textIn.nextLine();
                 System.out.println("what is your Job Title: ");
                 String jobTitle = textIn.nextLine();
                 System.out.println("what Department do you work in: ");
@@ -112,6 +121,16 @@ public class ContactsList {
                 Contacts aBiz = new Business(fName, lName, address, phoneNum, eMail, jobTitle, department);
                 aContact.add(aBiz);
             } else if (choice == 2) {
+                  System.out.println("Enter your First Name: ");
+        String fName = textIn.nextLine();
+        System.out.println("Enter your Last Name: ");
+        String lName = textIn.nextLine();
+        System.out.println("Enter your Address: ");
+        String address = textIn.nextLine();
+        System.out.println("Enter your Phone number in this format xxx-xxx-xxxx");
+        String phoneNum = textIn.nextLine();
+        System.out.println("Enter your e-mail address: ");
+        String eMail = textIn.nextLine();
                 System.out.println("What is your birthDate: ");
                 String birthDate = textIn.nextLine();
                 Contacts aFriend = new Personal(fName, lName, address, phoneNum, eMail, birthDate);
