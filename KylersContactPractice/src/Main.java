@@ -1,5 +1,6 @@
 import java.util.*;
 import java.nio.channels.*;
+import java.text.*;
 
 public class Main
 {
@@ -18,10 +19,34 @@ public class Main
 		
 		//prompt the user for input 
 		System.out.println("======== please select a usable value");
-		
-		
-		
-		
+		int choice = numIn.nextInt();
+		//if user selects one of the options 
+		switch(choice){
+			//add contacts from friends list
+			case 1:
+				aContact.add(friendContact);
+				
+				//add contacts from business contacts
+			case 2:
+				aContact.add(bizContact);
+				//get all contacts from contacts method
+			case 3:
+				aContact.add(getContacts);
+				
+			case 4:
+				//close the application 
+				System.exit(0);
+				
+				
+						
+						
+				
+		}
 		
 		}
+		
+		
+		
+		
+		
 }
