@@ -25,27 +25,44 @@ public class Personal extends Contacts {
     }
 
     public String getBirthDate() {
-        return birthDate;
+           String bDate= "";
+        //System.out.println("Please enter your birthdate in this format MM/DD/YYYY");
+        bDate = in.next();
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        // DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        String birth = formatter.format(bDate);
+        birth = bDate;
+        bDate = this.birthDate;
+        return bDate;
     }
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
-    public String birthDayFormat(String bDay) {
-       
-    }
-    public String newBirthDate(){
-        String dob="";
-        birthDayFormat(dob);
-        dob = getBirthDate();
-        return dob;
-    }
-   
+//    public String birthDayFormat(String bDay) {
+//        
+//        String bDate= "";
+//        //System.out.println("Please enter your birthdate in this format MM/DD/YYYY");
+//        bDate = in.next();
+//        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+//        // DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+//        String birth = formatter.format(bDate);
+//        birth = bDate;
+//        bDate = bDay;
+//        return bDate;
+//    }
+//    public String newBirthDate(){
+//        String dob="";
+//        birthDayFormat(dob);
+//        dob = getBirthDate();
+//        return dob;
+//    }
+//   
 
     @Override
     public String toString() {
-        return "Personal{" + "birthDate=" + newBirthDate() + '}';
+        return "Personal{" + "birthDate=" + birthDate + '}';
     }
 
 }
