@@ -123,7 +123,7 @@ public class ContactsList {
         String phoneNum = textIn.nextLine();
         System.out.println("Enter your e-mail address: ");
         String eMail = textIn.nextLine();
-                System.out.println("What is your birthDate: ");
+                System.out.println("Enter your BirthDate: ");
                 String birthDate = textIn.nextLine();
                 Contacts aFriend = new Personal(fName, lName, address, phoneNum, eMail, birthDate);
                 aContact.add(aFriend);
