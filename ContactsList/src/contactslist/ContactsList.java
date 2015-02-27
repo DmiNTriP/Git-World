@@ -8,7 +8,10 @@
  */
 package contactslist;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.Reader;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -46,10 +49,11 @@ public class ContactsList {
             System.out.println("|     3. Display your Contacts                   |");
             System.out.println("| 4.Exit the program                         |");
             System.out.println("|================================================|");
-            Path source =Paths.get("ContactStorage/Contact.txt");
-            Files.createFile(source);
-             System.out.println("Get File Name: " + source + " " + "was created");
+            Path path =Paths.get("Contact.txt");
+            Files.createFile(path);
+             System.out.println("Get File Name: " + path.getFileName() + " " + "was created");
             //print statement for user input
+             Path targetPath =Paths.get("Contacts.txt");
             System.out.println("Welcome please press a numerical key to start!");
 
             System.out.println("Please input a corresponding numerical value from the above menu: ");
@@ -83,6 +87,19 @@ public class ContactsList {
                 //if user enters anything else other than mentioned above 
                 default:
                     System.out.println("invalid selection please try again");
+                 
+                    Charset charset =Charset.forName("US-ACII");
+                    
+                    try(BufferedReader read = Files.newBufferedReader(path, charset)){
+                     String lines = null;
+                     while((lines = read.readLine())!= null){
+                         System.out.println("");
+                     }
+                    
+                    } catch(IOException e){
+                    System.out.println(e.getMessage());
+                    
+                }
 
             }
         }
@@ -94,6 +111,24 @@ public class ContactsList {
         Scanner numIn = new Scanner(System.in);
 
         // System.out.println("Enter 1 for Business contact or 2 for Personal contact");
+        Path pathto = Paths.get("addContacts");
+            Charset charset =Charset.forName("US-ACII");
+                    
+                    try(BufferedReader read = Files.newBufferedReader(pathto, charset)){
+                     String lines = null;
+                     while((lines = read.readLine())!= null){
+                         System.out.println("");
+                     }
+                    
+                    } catch(IOException e){
+                    System.out.println(e.getMessage());
+                    
+                }
+
+      /**  try(BufferedReader reader =Files.newBufferedReader(source, charset)){
+            
+        }*/
+        
         int choice = numIn.nextInt();
 
         if (choice == 1) {
