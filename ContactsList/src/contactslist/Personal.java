@@ -19,7 +19,7 @@ public class Personal extends Contacts {
     Scanner in = new Scanner(System.in);
     private String birthDate;
 
-    public Personal(String birthDate, String fName, String lName, String phoneNum, String address, String eMail) {
+    public Personal( String fName, String lName, String phoneNum, String address, String eMail,String birthDate) {
         super(fName, lName, phoneNum, address, eMail);
         this.birthDate = birthDate;
     }
@@ -62,9 +62,12 @@ public class Personal extends Contacts {
 
     @Override
     public String toString() {
-        return "Personal{" + "birthDate=" + birthDate + '}';
+        return super.toString() + "Personal{" + "birthDate=" + birthDate + '}';
     }
 
-}
+   
+    }
+
+
 
 

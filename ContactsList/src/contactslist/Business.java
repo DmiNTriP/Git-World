@@ -13,7 +13,7 @@ public class Business extends Contacts {
     private String department;
     private String jobTitle;
 
-    public Business(String department, String jobTitle, String fName, String lName, String phoneNum, String address, String eMail) {
+    public Business( String fName, String lName, String phoneNum, String address, String eMail,String department, String jobTitle) {
         super(fName, lName, phoneNum, address, eMail);
         this.department = department;
         this.jobTitle = jobTitle;

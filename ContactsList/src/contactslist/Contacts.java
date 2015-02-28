@@ -73,7 +73,7 @@ public abstract class Contacts {
 
     @Override
     public String toString() {
-        return "Contacts{" + "first name=" + fName + ", last name=" + lName + ", phone number=" + phoneNum + ", address=" + address + ", e-mail=" + eMail + '}';
+        return "Contacts{" + "first name=" + fName + " \n" + ", last name=" + lName + ", phone number=" + phoneNum + ", address=" + address + ", e-mail=" + eMail + '}';
     }
     
     
